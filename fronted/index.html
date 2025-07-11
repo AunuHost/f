@@ -9,7 +9,9 @@
   <input type="text" id="name" placeholder="AunuCloud" />
   <button onclick="submitForm()">Buat Server</button>
   <p id="result"></p>
-
+  
+  const backendUrl = "https://mypanel.aunuhost.web.id"; // Ganti dengan tunnel kamu
+  
   <script>
     async function submitForm() {
       const name = document.getElementById('name').value;
