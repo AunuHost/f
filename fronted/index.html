@@ -14,8 +14,11 @@
     
     async function submitForm() {
       const name = document.getElementById('name').value;
-      const res = await fetch('/create', {
-        method: 'POST',
+      const res = await fetch(`${backendUrl}/create`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ name })
+});
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name })
       });
